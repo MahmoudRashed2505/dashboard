@@ -1,8 +1,10 @@
+import 'package:dashbaord/helpers/local_navigator.dart';
+import 'package:dashbaord/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
 
 class LargeScreen extends StatelessWidget {
   const LargeScreen({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -10,16 +12,9 @@ class LargeScreen extends StatelessWidget {
     return Row(
       children: <Widget>[
         Expanded(
-          child: Container(
-            color: Colors.red,
-          ),
+          child: SideMenu(),
         ),
-        Expanded(
-          flex: 5,
-          child: Container(
-            color: Colors.blue,
-          ),
-        ),
+        Expanded(flex: 5, child: localNavigator())
       ],
     );
   }
