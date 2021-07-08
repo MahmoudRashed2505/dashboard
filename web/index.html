@@ -93,6 +93,23 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+    
   </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyCaAW_bj2QHPApd2o9z6audlN1lX29ZYuo",
+  authDomain: "quote-volta.firebaseapp.com",
+  projectId: "quote-volta",
+  storageBucket: "quote-volta.appspot.com",
+  messagingSenderId: "19069489661",
+  appId: "1:19069489661:web:74127759054985718f0994",
+  measurementId: "G-1ZN8TYSJTE"
+};
+firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
 </body>
 </html>

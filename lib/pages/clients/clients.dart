@@ -1,16 +1,41 @@
+import 'package:dashbaord/constants/controllers.dart';
+import 'package:dashbaord/helpers/responsiveness.dart';
+import 'package:dashbaord/pages/clients/widgets/clients_table.dart';
 import 'package:dashbaord/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ClientsPage extends StatelessWidget {
   const ClientsPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: CustomText(
-        text: "Clients Screen",
-        fontWeight: FontWeight.bold,
-      ),
+    return Column(
+      children: <Widget>[
+        Obx(
+          () => Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(
+                  top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6,
+                ),
+                child: CustomText(
+                  text: menuController.activeItem.value,
+                  size: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: ListView(
+            children: [
+              Clientstable(),
+            ],
+          ),
+        )
+      ],
     );
   }
 }

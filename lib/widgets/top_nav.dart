@@ -24,7 +24,7 @@ AppBar topNavigation(BuildContext context, GlobalKey<ScaffoldState> key) =>
               ),
             ),
       elevation: 0,
-      backgroundColor: light,
+      backgroundColor: Colors.transparent,
       title: Row(
         children: <Widget>[
           Visibility(

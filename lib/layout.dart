@@ -5,12 +5,13 @@ import 'package:dashbaord/widgets/small_screen.dart';
 import 'package:dashbaord/widgets/top_nav.dart';
 import 'package:flutter/material.dart';
 
-class SideLayout extends StatelessWidget {
+class SiteLayout extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       key: scaffoldKey,
       drawer: Drawer(
         child: SideMenu(),
